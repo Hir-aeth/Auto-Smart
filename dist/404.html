@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AutoSmart</title>
     <script>
+      // For project pages (/Auto-Smart/...), redirect to the repo base, not root.
+      var base = '/' + location.pathname.split('/')[1]; // e.g. "/Auto-Smart"
       sessionStorage.setItem('spa_redirect', location.pathname + location.search + location.hash);
-      location.replace('/');
+      location.replace(location.origin + base + '/');
     </script>
   </head>
   <body></body>
